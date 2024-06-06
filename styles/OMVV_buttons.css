@@ -1,0 +1,89 @@
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+	/*pagina para elegir colores: https://htmlcolorcodes.com/es/
+	background-color: #EB881F;*/
+    color: #EDF5E1;
+	background-color: #05386B;
+	/*background-color: #EB881F;*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* https://juanwebs.com/como-hacer-una-barra-de-busqueda-en-html-y-css/ */
+.barra-busqueda {
+  width: 400px;
+  height: 30px;
+  border: 3px solid black;
+  padding: 3px;
+  margin-bottom: 20px; /* Agrega espacio vertical */
+}
+
+.barra-busqueda input {
+  width: 270px;
+  height: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.barra-busqueda button {
+  width: 100px;
+  height: 30px;
+  background-color: #007bff;;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.barra-busqueda i {
+  width: 20px;
+  height: 20px;
+  color: #000;
+  margin-right: 5px;
+  /*padding:  10px 20px;*/
+}
+
+.button_salir {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+	/*pagina para elegir colores: https://htmlcolorcodes.com/es/
+	background-color: #EB881F;*/
+    color: #EDF5E1;
+	background-color: #FA4E09;
+	/*background-color: #EB881F;*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/*Estilos fila de botones*/
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  /* Estilos para los botones */
+  padding: 10px 20px;
+  background-color: #0074D9;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/*Color del boton al poner el cursor sobre el*/
+.btn:hover {
+  background-color: #000000;/*#2980B9;*/
+}
+
+
+.button:hover {    
+    background-color: #000000;	
+}

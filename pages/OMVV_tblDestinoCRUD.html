@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística.</title>	
+    <!-- Vinculación de archivos CSS -->
+    <link rel="stylesheet" href="../styles/OMVV_others.css">
+	<link rel="stylesheet" href="../styles/OMVV_buttons.css">
+</head>
+<body>
+    
+	<header>
+		<h1>DescubreTuregión.com<h1>
+		<h1>Layout con Botón de Búsqueda y Campos de Registro.</h1>
+		<h2>Tabla Destino.</h2>
+    </header>
+	
+	<main>
+    <!-- Botón de búsqueda v1.0
+    <button class="search-button">🔍</button> -->
+    
+	<!-- Botón de búsqueda v2.0-->
+	
+	<div class="barra-busqueda">
+		<input type="text" placeholder="Buscar">
+		<button>🔍Buscar</button>
+		<i class="fas fa-search"></i>
+	</div>
+	
+    <!-- Campos de registro en dos filas -->
+    <div class="record-row">
+		<div class="record-field-container">
+			<label for="tipo-destino">Tipo de Destino: </label>
+			<input type="text" id="tipo-destino" class="record-field" placeholder="Ej., Turistico">
+		</div>	
+		
+		<div class="record-field-container">
+			<label for="id-avion1">ID Avión 1: </label>
+			<input type="text" id="id-avion1" class="record-field" placeholder="Ej., 1">
+		</div>	
+	
+        <div class="record-field-container">
+			<label for="id-avion2">ID Avión 2: </label>
+			<input type="text" id="id-avion2" class="record-field" placeholder="Ej., 2">
+		</div>	
+        
+        <div class="record-field-container">
+			<label for="id-terrestre1">ID Transp. Terrestre 1: </label>
+			<input type="text" id="id-terrestre1" class="record-field" placeholder="Ej., 1">
+		</div>	
+	</div> 
+	
+	<div class="record-row"> 
+		<div class="record-field-container">
+			<label for="id-terrestre2">ID Transp. Terrestre 2: </label>
+			<input type="text" id="id-terrestre2" class="record-field" placeholder="Ej., 1">
+		</div>	
+		
+		<div class="record-field-container">
+			<label for="pais">País: </label>
+			<input type="text" id="pais" class="record-field" placeholder="Ej., México">
+		</div>	
+	
+		<div class="record-field-container">
+			<label for="resena">Reseña: </label>
+			<input type="text" id="resena" class="record-field" placeholder="Ej., Lugar muy hermoso">
+		</div>	
+	
+		<div class="record-field-container">
+			<label for="coordenada">Coordenada: </label>
+			<input type="text" id="coordenada" class="record-field" placeholder="Ej., Lat148, Long 124">
+		</div>			
+    </div> 
+
+	<div class="button-row">
+		<a href="#" class="button">Editar</a>
+		<a href="#" class="button">Eliminar</a>
+		<a href="#" class="button">Actualizar</a>
+		<a href="OMVV_catalogoAdmin.html" class="button">Catalogo Admin</a>
+		<a href="OMVV_logout.html" class="button_salir">Salir</a>
+	</div>
+
+	</main>
+	
+	<!-- Incluir el footer usando un iframe -->
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+	
+</body>
+</html>

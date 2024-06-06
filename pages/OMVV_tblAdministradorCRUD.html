@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística.</title>	
+    <!-- Vinculación de archivos CSS -->
+    <link rel="stylesheet" href="../styles/OMVV_others.css">
+	<link rel="stylesheet" href="../styles/OMVV_buttons.css">
+</head>
+<body>
+    
+	<header>
+		<h1>DescubreTuregión.com<h1>
+		<h1>Layout con Botón de Búsqueda y Campos de Registro.</h1>
+		<h2>Tabla Administradorores.</h2>
+    </header>
+	
+	<main>
+    <!-- Botón de búsqueda v1.0
+    <button class="search-button">🔍</button> -->
+    
+	<!-- Botón de búsqueda v2.0-->
+	
+	<div class="barra-busqueda">
+		<input type="text" placeholder="Buscar">
+		<button>🔍Buscar</button>
+		<i class="fas fa-search"></i>
+	</div>
+	
+    <!-- Campos de registro en dos filas -->
+	
+	<div class="record-row"> 
+		<div class="record-field-container">
+			<label for="id-usuario">Id Usuario: </label>
+			<select id="id-usuario" name="id-usuario" class="record-field">
+			<!-- Opciones de clientes llenadas dinámicamente -->
+            <option value="1">1.- Alex9849</option>
+            <option value="2">2.- Omar8893</option>
+            <!-- Añadir más opciones según los datos de base de datos -->
+            </select>
+        </div>
+	</div>
+	
+	
+    <div class="record-row">
+		<div class="record-field-container">
+			<label for="nombre-admin">Nombre Admin: </label>
+			<input type="text" id="nombre-admin" class="record-field" placeholder="Ej., Omar Said">
+		</div>	
+		
+		<div class="record-field-container">
+			<label for="primer-apellido-admin">1er. Apellido Admin: </label>
+			<input type="text" id="primer-apellido-admin" class="record-field" placeholder="Ej., Vázquez">
+		</div>	
+	
+		<div class="record-field-container">
+			<label for="segundo-apellido-admin">2do. Apellido Admin: </label>
+			<input type="text" id="segundo-apellido-admin" class="record-field" placeholder="Ej., Lopéz">
+		</div>	        
+	</div>
+	
+	<div class="record-row">
+        <div class="record-field-container">
+			<label for="rfc-cliente-admin">RFC Admin: </label>
+			<input type="text" id="rfc-cliente-admin" class="record-field" placeholder="Ej., VALO860429JDK">
+		</div>		
+		
+		<div class="record-field-container">
+			<label for="puesto-admin">Puesto Admin: </label>
+			<input type="text" id="puesto-admin" class="record-field" placeholder="Ej., Becario de Sistemas">
+		</div>		
+		
+		<div class="record-field-container">
+            <label for="fecha-registro">Fecha de Registro: </label>
+            <input type="date" id="fecha-registro" name="fecha-registro" class="record-field">
+        </div>			
+    </div> 
+
+	<div class="button-row">
+		<a href="#" class="button">Editar</a>
+		<a href="#" class="button">Eliminar</a>
+		<a href="#" class="button">Actualizar</a>
+		<a href="OMVV_catalogoAdmin.html" class="button">Catalogo Admin</a>
+		<a href="OMVV_logout.html" class="button_salir">Salir</a>
+	</div>
+
+	</main>
+	
+  <!-- Incluir el footer usando un iframe -->
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+</body>
+</html>

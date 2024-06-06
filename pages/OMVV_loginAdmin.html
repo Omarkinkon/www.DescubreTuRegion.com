@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística - Acceso de Administrador</title>
+    <link rel="stylesheet" href="../styles/OMVV_estilos.css">
+</head>
+<body>
+    <header>
+        <h1>DescubreTuregión.com</h1>
+        <h2>Acceso de Administrador</h2>
+    </header>
+    <main>
+        <h3>Bienvenido a nuestra empresa turística. Explora y reserva experiencias únicas en tu región.</h3>
+    </main>
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>Login</h1>
+            </div>
+            <div class="login-form">
+                <form action="../php/login.php" method="POST">
+                    <div class="control-group">
+						<!-- -->
+					    <!-- Añadir campo oculto para que desde aqui solo se pueda acceder como administrador-->
+					    <input type="hidden" name= "rol" value="admin">
+                        <input type="text" name="username" class="login-field" placeholder="username" id="login-name" required>
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+                    <div class="control-group">
+                        <input type="password" name="password" class="login-field" placeholder="password" id="login-pass" required>
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+                    <div class="control-group">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <div class="control-group">
+                    <a class="btn btn-primary btn-large" href="OMVV_registroAdmin.html">¿Aún no está registrado?</a>
+                </div>
+                <div class="control-group">
+                    <a class="btn btn-primary btn-large" href="../index.html">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,1006 @@
+/*estilos para generar el menu horizontal apartiir de la lista desordenada*/
+/* Estilos para el menú */
+/*ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}*/
+
+/*Asignar color de fondo al menu*/
+nav {
+    background-color: #4AEB05; /*#f2f2f2;*/
+    font-family: 'B20Sans';
+    font-weight: normal;
+    color: #05386b;
+    padding: 10px 20px; /* Espaciado interno del menú */
+    text-align: center; /* Alineación del texto */
+}
+
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline; /* Ítems del menú en una línea horizontal */ 
+}
+
+li {
+    float: left;
+	/*position: relative;*/
+    /*display: inline-block;*/
+}
+li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #ddd;
+}
+
+
+/************/
+nav li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #ddd;
+}
+
+/************/
+
+
+
+/* Estilo del submenú */
+.submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #095BFA; /*#333;*/
+    min-width: 160px;
+    z-index: 1;
+    /*left: 600px; /* Ajusta este valor según el ancho del menú desplegable padre */
+    top: 0;
+    left: 190px; /* Cambia la posición izquierda para que esté al lado derecho del elemento padre */
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #9DFA09;
+    min-width: 160px;
+    z-index: 1;
+	/* left: 100%; /* Cambia la posición izquierda para que esté al lado derecho del elemento padre */
+}
+
+.dropdown-content li {
+	/*rigth: 100%; /* Cambia la posición izquierda para que esté al lado derecho del elemento padre */
+	display: block	
+}
+/*Color del submenu*/
+.dropdown-content a {
+    background-color: #9DFA09;
+}
+
+/*Submenu primer nivel en color morado*/
+.dropdown-content a:hover {
+    background-color: #A826E5; /*#555;*/
+}
+
+li:hover > .dropdown-content {
+    /*left: 100%; /* Cambia la posición izquierda para que esté al lado derecho del elemento padre */
+	display: block;
+}
+
+.dropdown-content .submenu-content {
+    display: none;
+    position: relative;
+    /*left: 10px; /* Ajustar este vakir al ancho del  menu desplegable principal*/
+	left: 30%; /* Cambia la posición izquierda para que esté al lado derecho del elemento padre */
+    top: 0;
+}
+
+.dropdown-content li:hover > .submenu-content {
+    display: block;
+}
+
+
+/* Estilo del submenú */
+nav li ul {
+    display: none;
+    position: absolute;
+    background-color: #4AEB05;
+    min-width: 160px;
+    z-index: 1;
+}
+nav li ul li {
+    float: none;
+    display: block;
+}
+nav li ul li a {
+    padding: 12px 16px;
+    text-align: left;
+}
+nav li:hover ul {
+    display: block;
+}
+nav li ul li a:hover {
+    background-color: #36a203;
+}
+/**************************/
+
+
+/*Estilos generales*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header, nav, .carousel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header {
+    background-color: #BAFBE8;
+    padding: 20px;
+    text-align: center;
+    color: #3B3B3B;
+}
+main {
+    background-color: #BAFBE8;
+    padding: 5px;
+    text-align: center;
+    color: #05386B;
+    flex: 1; /* Permite que el main se expanda y ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 70%; /* Tamaño mediano para la imagen */
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+button.prev {
+    left: 10px;
+}
+button.next {
+    right: 10px;
+}
+
+/* Estilos para los títulos y el footer */
+h1 {
+    font-family: 'bsurp___';
+    font-weight: bold;
+    color: #05386b;
+}
+h2, h3 {
+    font-family: 'B20Sans';
+    font-weight: normal;
+    color: blue;
+}
+footer {
+    background-color: #5CDB95;
+    padding: 20px;
+    font-family: 'abel-regular';
+    font-weight: normal;
+    color: blue;
+}
+/* Estilos para las filas y campos de registro */
+.record-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.record-field {
+    font-weight: bold;
+    color: #333;
+    flex: 1;
+    margin-right: 10px;
+}
+.record-field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.record-field-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/*estilos para el textarea de la reseña*/
+
+/* Nueva clase para el textarea */
+.bloc_reseña {
+    width: calc(100% * 2); /* Establece el ancho al doble del contenedor */
+	/*width: 180px; /* Ajusta el ancho al 100% del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde de color gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Estilos adicionales para enfoque */
+.bloc_reseña:focus {
+    border-color: #66afe9; /* Cambia el color del borde en enfoque */
+    outline: none; /* Elimina el contorno por defecto */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Sombra para indicar enfoque */
+}
+
+/* Menú  de navegación*/
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/*Estilos para cragar imagenes*/
+/* Ocultar el input de tipo file */
+.file-input {
+    display: none;
+}
+
+/* Estilo del label como botón */
+.file-label {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Cambiar color del label (botón) al pasar el mouse */
+.file-label:hover {
+    background-color: darkblue;
+}
+
+/* Estilos para los botones */
+.button, .button_salir {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #EDF5E1;
+}
+.button {
+    background-color: #05386B;
+}
+.button_salir {
+    background-color: #FA4E09;
+}
+/* Estilos fila de botones */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+.barra-busqueda {
+    width: 400px;
+    height: 30px;
+    border: 3px solid black;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+.barra-busqueda input {
+    width: 270px;
+    height: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.barra-busqueda button {
+    width: 100px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.barra-busqueda i {
+    width: 20px;
+    height: 20px;
+    color: #000;
+    margin-right: 5px;
+}
+/* Font-face definitions */
+@font-face {
+    font-family: "Slime Candy";
+    src: url('../fonts/Slime Candy.otf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: "Crush Bubble";
+    src: url('../fonts/Crush Bubble.otf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: "abel-regular";
+    src: url('../fonts/abel-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "3Dumb";
+    src: url('../fonts/3Dumb.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: "bsurp___";
+    src: url('../fonts/bsurp___.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: "B20Sans";
+    src: url('../fonts/B20Sans.ttf');
+    font-weight: bold;
+    font-style: bold;
+}
+
+/***Botones***/
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+	/*pagina para elegir colores: https://htmlcolorcodes.com/es/
+	background-color: #EB881F;*/
+    color: #EDF5E1;
+	background-color: #05386B;
+	/*background-color: #EB881F;*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* https://juanwebs.com/como-hacer-una-barra-de-busqueda-en-html-y-css/ */
+.barra-busqueda {
+  width: 400px;
+  height: 30px;
+  border: 3px solid black;
+  padding: 3px;
+  margin-bottom: 20px; /* Agrega espacio vertical */
+}
+
+.barra-busqueda input {
+  width: 270px;
+  height: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.barra-busqueda button {
+  width: 100px;
+  height: 30px;
+  background-color: #007bff;;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.barra-busqueda i {
+  width: 20px;
+  height: 20px;
+  color: #000;
+  margin-right: 5px;
+  /*padding:  10px 20px;*/
+}
+
+.button_salir {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+	/*pagina para elegir colores: https://htmlcolorcodes.com/es/
+	background-color: #EB881F;*/
+    color: #EDF5E1;
+	background-color: #FA4E09;
+	/*background-color: #EB881F;*/
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/*Estilos fila de botones*/
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  /* Estilos para los botones */
+  padding: 10px 20px;
+  background-color: #0074D9;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/*********** LOGIN **************/
+
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+body {
+font-family: Arial;
+background-color: #FFFFFF;/*#BAFBE8;/*#3498DB;*/
+/*padding: 50px;*/
+}
+.login {
+margin: 20px auto;
+width: 300px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 50px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #777;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+/*Color del boton al poner el cursor sobre el*/
+.btn:hover {
+  background-color: #000000;/*#2980B9;*/
+}
+
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+  margin-top: 12px;
+}
+
+/**NAvbar**/
+
+/*estilos para generar el menu horizontal apartior de la lista  desordenada*/
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav li {
+    display: inline; /* Ítems del menú en una línea horizontal */ 
+}
+/*Asignar color de fondo al menu*/
+nav {
+    background-color: #4AEB05; /*#f2f2f2;*/
+	font-family:'B20Sans';	
+	/*font-family:'bsurp___';*/
+	font-weight: normal;
+	color: #05386b;
+  }
+ 
+li {
+   float: left;
+}
+  
+li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, .carousel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/****otros****/
+
+/*@font-face
+{
+   font-family: "Cristalab";
+   src: url("fuentefancy.eot");
+   src: url("fuentefancy.eot?#amocristalab") format("embedded-opentype"),
+        url("fuentefancy.woff") format("woff"),
+        url("fuentefancy.ttf") format("truetype"),
+        url("fuentefancy.svg#IDdelafuente") format("svg");
+}*/
+
+@font-face {
+    font-family: "Slime Candy";
+    src: url('../fonts/Slime Candy.otf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: bold;	
+	font-style:bold;
+}
+
+
+@font-face {
+    font-family: "Crush Bubble";
+    src: url('../fonts/Crush Bubble.otf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: bold;	
+	font-style:bold;
+}
+
+
+@font-face {
+    font-family: "abel-regular";
+    src: url('../fonts/abel-regular.ttf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: normal;	
+	font-style:normal;
+}
+
+
+@font-face {
+    font-family: "3Dumb";
+    src: url('../fonts/3Dumb.ttf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: bold ;
+	font-style: bold;
+}
+
+@font-face {
+    font-family: "bsurp___";
+    src: url('../fonts/bsurp___.ttf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: bold ;
+	font-style: bold;
+}
+
+@font-face {
+    font-family: "B20Sans";
+    src: url('../fonts/B20Sans.ttf');
+	/*https://www.youtube.com/watch?v=Jh9lIki-Sww*/
+	/*https://fonts.google.com/ */
+	/*https://fonts.google.com/knowledge/using_type/self_hosting_web_fonts*/
+	font-weight: bold ;
+	font-style: bold;
+}
+
+
+h1{
+	font-family:'bsurp___';
+	font-weight: bold;
+	color: #05386b;
+	/*color: #800080; /*para el footer*/
+}
+
+h2{
+	font-family:'B20Sans'; /*Slime Candy*/
+	font-weight: normal;
+	color: blue;
+}
+
+h3{
+	font-family:'B20Sans';
+	font-weight: normal;
+	color: blue;
+}
+
+footer{
+	
+	background-color: #5CDB95; 
+    padding: 20px; /* Añade espacio alrededor del contenido */    	
+	font-family:'abel-regular';
+	font-weight: normal;
+	color: blue;
+	
+}
+
+body {      	
+	font-family: "abel-regular";	
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Asegurar que el footer se mantenga en la parte inferior de la página */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #BAFBE8;
+	/*background-color: #f5f5f5;*/
+    padding: 20px;
+    text-align: center;
+	color: #3B3B3B
+	/*#EDF5E1;*/
+}
+
+/* Ajustes de los elementos principales */
+main {
+    background-color: #BAFBE8;
+	padding: 5px;
+    text-align: center;
+	color: #05386B;
+	/* ajuste cuasndo lo coloque para que ocupe todo el espacio posible*/
+	flex: 1; /* Permite que el main se expanda y ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+img {
+    width: 70%; /* Tamaño mediano para la imagen */
+    max-width: 600px;
+	/*max-width: 100%;*/
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/*basado en los estilos descritos de https://css101.net/menu-horizontal-responsive-con-html-y-css-codigo/
+, hemos aplicado estilos al menú utilizando propiedades CSS como `background-color`, `list-style-type`, `
+margin`, `padding`, `float`, `display`, `color`, `text-align` y `text-decoration`. También hemos añadido
+un estilo para el efecto hover al pasar el cursor sobre las opciones del menú.*/
+ 
+/*estilos para generar el menu horizontal apartior de la lista  desordenada*/
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+	margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav li {
+    display: inline; /* Ítems del menú en una línea horizontal */ 
+}
+/*Asignar color de fondo al menu v1.0
+nav {
+    background-color: #4AEB05; #f2f2f2;
+	font-family:'B20Sans';	
+	font-family:'bsurp___';
+	font-weight: normal;
+	color: #05386b;
+  }*/
+
+nav {  
+background-color: #4AEB05; /* Fondo del menú */
+    font-family: 'B20Sans'; /* Familia de fuentes */
+    font-weight: normal; /* Peso de la fuente */	
+    color: #05386b; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno del menú */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Estilo para los enlaces del menú */
+nav a {
+    font-size: 20px; /* Tamaño del texto */
+    color: inherit; /* Hereda el color del elemento nav */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 15px; /* Espaciado entre enlaces */
+}
+
+/* Cambiar el tamaño del texto al pasar el ratón */
+nav a:hover {
+    font-size: 25px; /* Tamaño del texto al pasar el ratón */
+    color: #ffffff; /* Color del texto al pasar el ratón */
+}
+  
+ 
+li {
+   float: left;
+}
+  
+li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la fila de registro */
+.record-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los campos de registro */
+.record-field {
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+.record-field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto del label a la izquierda */
+    margin-bottom: 10px; /* Espacio entre cada campo */
+}
+
+.record-field-container label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+}
+
+
+
+/* The navigation menu */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+/**********Registro Administrador*********/
+
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+.admin_register {
+margin: 20px auto;
+width: 300px;
+}
+.admin_register-screen {
+background-color: #FFF;
+padding: 50px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #777;
+}
+
+.admin_register-form {	
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+/*Color del boton al poner el cursor sobre el*/
+.btn:hover {
+  background-color: #000000;/*#2980B9;*/
+}
+
+p {
+    text-align: center;
+/*	padding: 10px 0;*/
+    width: 250px;
+}
+
+/**********Registro Cliente*********/
+
+.client_register {
+margin: 20px auto;
+width: 300px;
+}
+.client_register-screen {
+background-color: #FFF;
+padding: 50px;
+border-radius: 5px
+}
+
+.app-title {
+text-align: center;
+color: #777;
+}
+
+.client_register-form {	
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística.</title>
+	
+    <!-- Vinculación de archivos CSS -->
+	<link rel="stylesheet" href="../styles/OMVV_estilos.css">
+	
+	
+	
+</head>
+<body>
+    <header>
+        <h1>DescubreTuregión.com</h1>		
+        <h1>Catálogo Administrador</h1>
+    </header>
+
+    <main>
+        <nav>
+            <ul> 
+				<!-- Submenú de Usuarios -->
+				
+                <li><a href="#">Usuarios</a>
+					<ul class="dropdown-content">	
+
+						<li><a href="#">Roles</a>
+                            <ul class="submenu-content">
+                                <li><a href="OMVV_tblRolesCRUD.html">Crear</a></li>
+                                <li><a href="OMVV_tblRolesCRUD.html">Editar</a></li>
+                                <li><a href="OMVV_tblRolesCRUD.html">Borrar</a></li>
+                                <li><a href="OMVV_tblRolesCRUD.html">Ver</a></li>
+                            </ul>
+
+					
+						<li><a href="#">Clientes</a>
+							<ul class="submenu-content">
+								<li><a href="OMVV_tblClienteCRUD.html">Crear </a></li>
+                                <li><a href="OMVV_tblClienteCRUD.html">Editar</a></li>
+                                <li><a href="OMVV_tblClienteCRUD.html">Borrar</a></li>
+                                <li><a href="OMVV_tblClienteCRUD.html">Ver</a></li>
+							</ul>
+						</li>  
+					
+					<li><a href="#">Administradores</a>
+						<ul class="submenu-content">
+							<li><a href="OMVV_tblAdministradorCRUD.html">Crear</a></li>
+                            <li><a href="OMVV_tblAdministradorCRUD.html">Editar</a></li>
+                            <li><a href="OMVV_tblAdministradorCRUD.html">Borrar</a></li>
+                            <li><a href="OMVV_tblAdministradorCRUD.html">Ver</a></li>
+                        </ul>
+                    </li>
+					</ul>
+                </li>   
+			
+                <li><a href="#">Destinos</a>
+                    <ul>
+                        <li><a href="OMVV_registroDestino.html">Crear Destino</a></li>
+                        <li><a href="OMVV_tblDestinoCRUD.html">Editar Destino</a></li>
+                        <li><a href="OMVV_tblDestinoCRUD.html">Borrar Destino</a></li>
+                        <li><a href="OMVV_tblDestinoCRUD.html">Ver Destinos</a></li>
+                    </ul>                
+                </li>
+                <li><a href="#">Transporte Aereo</a>
+                    <ul>
+                        <li><a href="OMVV_registroAereo.html">Crear Transporte Aereo</a></li>
+                        <li><a href="OMVV_tblAvionCRUD.html">Editar Transporte Aereo</a></li>
+                        <li><a href="OMVV_tblAvionCRUD.html">Borrar Transporte Aereo</a></li>
+                        <li><a href="OMVV_tblAvionCRUD.html">Ver Transportes Aereos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Transporte Terrestre</a>
+                    <ul>
+                        <li><a href="OMVV_registroTerrestre.html">Crear Transporte Terrestre</a></li>
+                        <li><a href="OMVV_tblTranspTerrestreCRUD.html">Editar Transporte Terrestre</a></li>
+                        <li><a href="OMVV_tblTranspTerrestreCRUD.html">Borrar Transporte Terrestre</a></li>
+                        <li><a href="OMVV_tblTranspTerrestreCRUD.html">Ver Transportes Terrestres</a></li>
+                    </ul>
+                </li>                                    
+                
+                <li><a href="#">Bitacora</a>
+                    <ul>
+                        <li><a href="OMVV_tblBitacoraCRUD.html">Crear Entrada</a></li>
+                        <li><a href="OMVV_tblBitacoraCRUD.html">Editar Entrada</a></li>
+                        <li><a href="OMVV_tblBitacoraCRUD.html">Borrar Entrada</a></li>
+                        <li><a href="OMVV_tblBitacoraCRUD.html">Ver Entradas</a></li>
+                    </ul>
+                </li>    
+                
+                <li><a href="OMVV_logout.html">Salir</a></li>
+
+                
+            </ul>
+        </nav>
+
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../img/imagen1carrusel.jpg" alt="Imagen 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../img/imagen2carrusel.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../img/imagen3carrusel.jpg" alt="Imagen 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="../img/imagen4carrusel.webp" alt="Imagen 4">
+                </div>
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </section>
+
+        <script src="../scripts/script.js"></script>
+    </main>
+
+    <!-- Incluir el footer usando un iframe -->
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística.</title>	
+    <!-- Vinculación de archivos CSS -->
+    <link rel="stylesheet" href="../styles/OMVV_others.css">
+	<link rel="stylesheet" href="../styles/OMVV_buttons.css">
+</head>
+<body>
+    
+	<header>
+		<h1>DescubreTuregión.com<h1>
+		<h1>Layout con Botón de Búsqueda y Campos de Registro.</h1>
+		<h2>Tabla Usuarios.</h2>
+    </header>
+	
+	<main>
+    <!-- Botón de búsqueda v1.0
+    <button class="search-button">🔍</button> -->
+    
+	<!-- Botón de búsqueda v2.0-->
+	
+	<div class="barra-busqueda">
+		<input type="text" placeholder="Buscar">
+		<button>🔍Buscar</button>
+		<i class="fas fa-search"></i>
+	</div>
+	
+    <!-- Campos de registro en dos filas -->
+    
+	<div class="record-row"> 
+		<div class="record-field-container">
+			<label for="id-rol">Id Rol: </label>
+			<select id="id-rol" name="id-rol" class="record-field">
+			<!-- Opciones de clientes llenadas dinámicamente -->
+            <option value="1">1.- Administrador</option>
+            <option value="2">2.- Cliente</option>
+            <!-- Añadir más opciones según los datos de base de datos -->
+            </select>
+        </div>
+	</div>
+		
+	<div class="record-row"> 
+		<div class="record-field-container">
+			<label for="nombre-usuario">Nombre de Usuario: </label>
+			<input type="text" id="nombre-usuario" class="record-field" placeholder="Omar8088">
+		</div>	
+	</div> 
+	
+	<div class="record-row"> 
+        <div class="record-field-container">
+			<label for="email">E-mail: </label>
+			<input type="text" id="email" class="record-field" placeholder="Ej., Nombre@gmail.com">
+		</div>	
+	</div> 
+
+	<div class="record-row"> 
+		<div class="record-field-container">
+			<label for="password">Contraseña: </label>
+			<input type="password" id="password" name="password" class="record-field">
+		</div>	
+	</div>		
+
+	<div class="button-row">
+		<a href="#" class="button">Editar</a>
+		<a href="#" class="button">Eliminar</a>
+		<a href="#" class="button">Actualizar</a>
+		<a href="OMVV_catalogoAdmin.html" class="button">Catalogo Admin</a>
+		<a href="OMVV_logout.html" class="button_salir">Salir</a>
+	</div>
+
+	</main>
+	<!-- Incluir el footer usando un iframe -->
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+	
+</body>
+</html>

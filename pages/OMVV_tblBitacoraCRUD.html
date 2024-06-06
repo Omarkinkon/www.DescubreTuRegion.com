@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Turística.</title>	
+    <!-- Vinculación de archivos CSS -->
+    <link rel="stylesheet" href="../styles/OMVV_others.css">
+	<link rel="stylesheet" href="../styles/OMVV_buttons.css">
+</head>
+<body>
+    
+	<header>
+		<h1>DescubreTuregión.com<h1>
+		<h1>Layout con Botón de Búsqueda y Campos de Registro.</h1>
+		<h2>Tabla Bitácora.</h2>
+    </header>
+	
+	<main>
+    <!-- Botón de búsqueda v1.0
+    <button class="search-button">🔍</button> -->
+    
+	<!-- Botón de búsqueda v2.0-->
+	
+	<div class="barra-busqueda">
+		<input type="text" placeholder="Buscar">
+		<button>🔍Buscar</button>
+		<i class="fas fa-search"></i>
+	</div>
+	
+    <!-- Campos de registro en dos filas -->
+	<!-- <form action="your_server_side_script.php" method="post">-->
+	<!-- Selección de ID de Cliente -->
+	
+            <div class="record-row">
+                <div class="record-field-container">
+                    <label for="id-cliente">ID Cliente: </label>
+                    <select id="id-cliente" name="id-cliente" class="record-field">
+                        <!-- Opciones de clientes llenadas dinámicamente -->
+                        <option value="1">Cliente 1</option>
+                        <option value="2">Cliente 2</option>
+                        <!-- Añadir más opciones según los datos de tu base de datos -->
+                    </select>
+                </div>
+			</div>
+	
+	
+			<!--El formato DATETIME espera la fecha y la hora en el formato 'AAAA-MM-DD hh:mm:ss', debe asegurarse que el servidor 
+			que procesa el formulario sea capaz de manejar este formato y almacenar correctamente los datos en la base de datos.-->
+		<div class="record-row">	
+			<div class="record-field-container">
+				<label for="fecha-hora">Fecha y Hora: </label>
+				<input type="datetime-local" id="fecha-hora" name="fecha-hora" class="record-field">
+			</div>
+	</div>
+	
+	
+	<div class="button-row">
+		<a href="#" class="button">Editar</a>
+		<a href="#" class="button">Eliminar</a>
+		<a href="#" class="button">Actualizar</a>
+		<a href="OMVV_catalogoAdmin.html" class="button">Catalogo Admin</a>
+		<a href="OMVV_logout.html" class="button_salir">Salir</a>
+	</div>
+
+	</main>
+  <!-- Incluir el footer usando un iframe -->
+    <iframe src="../componentes/OMVV_footer.html" style="width: 100%; border: none;"></iframe>
+	
+</body>
+</html>
